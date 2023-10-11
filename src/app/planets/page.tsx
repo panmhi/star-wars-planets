@@ -19,6 +19,7 @@ export default async function Planets({
         <h1 className='mb-8 text-3xl font-bold'>Star Wars Planets</h1>
         <div>
           {/* Use Suspense and Await for the skeleton loading effect in the server component */}
+          {/* getPlanetsWithPagination method is paused for 1 second to demo the skeleton loading effect */}
           <Suspense fallback={<DataTableSkeleton />}>
             <Await promise={promise}>
               {({ results, next, previous }) => (
